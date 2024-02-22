@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_ABAP_ZIP</CLSNAME>
+    <LANGU>C</LANGU>
+    <DESCRIPT>Zip Utility</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Fügt eine Datei in den Zip-Ordner ein</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_HEADER</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Add crypto file header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_X</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Hex add without overflow</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Constructor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CRC32</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Berechnen eine CRC32 Wert</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DELETE</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Löscht eine Datei im Zip-Ordner</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Liest eine Datei aus dem Zip-Ordner</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>LEFT_SHIFT_X</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Hex left shift</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>LOAD</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Lädt eine Zip-Datei</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MULTIPLY_X</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Hex multiply without oveflow</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>RIGHT_SHIFT_X</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Hex right shift</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Erstellt eine ZIP-Datei</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SPLICE</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Lädt und split eine Zip-Datei</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SUPPORT_UNICODE_NAMES</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>feature initialy disabled because of compatibility</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UNSIGNED_RIGHT_SHIFT_X</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Hex right shift unsigned</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_KEYS</CMPNAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Init keys</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD</CMPNAME>
+     <SCONAME>COMPRESS_LEVEL</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Komprimierungsgrad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD</CMPNAME>
+     <SCONAME>FILE_TIMESTAMP</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Zeitstempel  für das File im ZIP Archiv</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD</CMPNAME>
+     <SCONAME>NAME</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Name (von Groß-/Kleinschreibung abhängig)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_HEADER</CMPNAME>
+     <SCONAME>HEADER</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Instance number (unique value)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_HEADER</CMPNAME>
+     <SCONAME>KEY0</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_HEADER</CMPNAME>
+     <SCONAME>KEY1</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_HEADER</CMPNAME>
+     <SCONAME>KEY2</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_X</CMPNAME>
+     <SCONAME>A</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_X</CMPNAME>
+     <SCONAME>B</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_X</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DELETE</CMPNAME>
+     <SCONAME>INDEX</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Entweder Name oder Index</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DELETE</CMPNAME>
+     <SCONAME>NAME</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Name (von Groß-/Kleinschreibung abhängig)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>CONTENT</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Inhalt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>INDEX</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Entweder Name oder Index</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>NAME</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Name (von Groß-/Kleinschreibung abhängig)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LEFT_SHIFT_X</CMPNAME>
+     <SCONAME>RETURNING</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LEFT_SHIFT_X</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MULTIPLY_X</CMPNAME>
+     <SCONAME>A</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MULTIPLY_X</CMPNAME>
+     <SCONAME>B</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MULTIPLY_X</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RIGHT_SHIFT_X</CMPNAME>
+     <SCONAME>RETURNING</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RIGHT_SHIFT_X</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UNSIGNED_RIGHT_SHIFT_X</CMPNAME>
+     <SCONAME>RETURNING</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UNSIGNED_RIGHT_SHIFT_X</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_KEYS</CMPNAME>
+     <SCONAME>IS_HEADER</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>Booleovská proměnná (X=true, -=false, space=unknown)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_KEYS</CMPNAME>
+     <SCONAME>KEY0</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_KEYS</CMPNAME>
+     <SCONAME>KEY1</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_KEYS</CMPNAME>
+     <SCONAME>KEY2</SCONAME>
+     <LANGU>C</LANGU>
+     <DESCRIPT>hexadecimální pole-4 znaky</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
